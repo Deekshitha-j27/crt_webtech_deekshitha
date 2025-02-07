@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: 'Raleway',sans-serif;
+            color: aqua;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: .5em;
+            top: 15%;
+            background: linear-gradient(to right,red,yellow);
+        }
+        h1{
+            font: 600 3.5em'Raleway',sans-serif;
+            color: antiquewhite;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: .5em;
+            width: 100%;
+        }
+        h3{
+            font: 300 1em'Raleway',sans-serif;
+            color: pink;
+            text-align: center;
+            text-transform: none;
+            letter-spacing: 0.01em;
+        }
+    </style>
+</head>
+<body id="gradient">
+<h1>Background Generator</h1>
+<input class="color 1" type="color" name="color1" value="aff0000">
+<input class="color 2" type="color" name="color2" value="aff0000">
+<h2>Current Css Background</h2>
+<h3></h3>
+<script>
+    var css=document.querySelector("h3");
+    var color1=document.querySelector("color1");
+    var color2=document.querySelector("color2");
+    var body=document.querySelector("gradient");
+    function setgradient(){
+        body.style.background=
+        "linear gradient(to right;"
+        +color1.Value
+        +";"
+        +color1.Value
+        +")";
+        css.textcontent=body.style.background+";";
+    }
+    color1.addeventlistener("input";setgradient)
+</script>
+</body>
+</html>
