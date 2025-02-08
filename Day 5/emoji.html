@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: cornflowerblue;
+        }
+        #emoji{
+            font-size: 10rem;
+            filter: grayscale();
+        }
+        #emoji:hover{
+            transform: scale(1.1);
+            filter: grayscale(0);
+        }
+    </style>
+</head>
+<body>
+            
+            <div id="emoji">😏</div>
+    <script>
+        const btn = document.querySelector("#emoji");
+        const emojis = [
+            "😏",
+            "❤",
+            "🌟",
+            "🔥",
+            "🚀",
+            "😊",
+            "😍",
+            "😒",
+            "🥰",
+            "😉",
+            "😗",
+            "😙",
+            "🥲",
+            "😎",
+            "😮",
+            "🤣"
+        ];
+        let index=0;
+        btn.addEventListener("mouseover", () =>{
+            btn.innerHTML=emojis[index];
+            index++;
+            if (index>=emojis.length) {
+                index=0;
+            }
+        });
+    </script>
+</body>
+</html>
